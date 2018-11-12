@@ -1,0 +1,24 @@
+diff --git a/syntax/javascript.vim b/syntax/javascript.vim
+index 2ea2979..d293190 100644
+--- a/syntax/javascript.vim
++++ b/syntax/javascript.vim
+@@ -180,7 +180,8 @@ syntax match javaScriptBraces       "[{}\[\]]"
+ syntax match javaScriptParens       "[()]"
+ syntax match javaScriptOpSymbols    "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\|-="
+ syntax match javaScriptEndColons    "[;,]"
+-syntax match javaScriptLogicSymbols "\(&&\)\|\(||\)"
++" Added ! as a logic symbol
++syntax match javaScriptLogicSymbols "\(&&\)\|\(||\)\|!"
+ "}}}
+ " ES6 String Interpolation {{{
+ syntax match  javaScriptTemplateDelim    "\${\|}" contained
+@@ -235,7 +236,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
+ 	HiLink javaScriptPrototype              Type
+ 	HiLink javaScriptConditional            Conditional
+ 	HiLink javaScriptBranch                 Conditional
+-	HiLink javaScriptIdentifier             Identifier
++" Used to be identifer
++	HiLink javaScriptIdentifier             StorageClass
+ 	HiLink javaScriptRepeat                 Repeat
+ 	HiLink javaScriptStatement              Statement
+ 	HiLink javaScriptMessage                Keyword
